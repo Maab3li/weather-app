@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/weather-app/static/css/main.07a091d8.css",
+    "main.js": "/weather-app/static/js/main.0e617f8e.js",
+    "static/media/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf": "/weather-app/static/media/BricolageGrotesque-VariableFont_opsz,wdth,wght.175002216ea0536c7b5d.ttf",
+    "static/media/DMSans-Italic-VariableFont_opsz,wght.ttf": "/weather-app/static/media/DMSans-Italic-VariableFont_opsz,wght.70561bf1fd655fe216c8.ttf",
+    "static/media/DMSans-VariableFont_opsz,wght.ttf": "/weather-app/static/media/DMSans-VariableFont_opsz,wght.39867822ec01fc077cb5.ttf",
+    "static/media/logo.svg": "/weather-app/static/media/logo.180877536ebf0b1c44abc6d88d4e9bae.svg",
+    "static/media/bg-today-small.svg": "/weather-app/static/media/bg-today-small.cd99d8d596b67e82e0ca465e13cf7d9d.svg",
+    "static/media/icon-units.svg": "/weather-app/static/media/icon-units.9eb215646b61f2862cc634e3def04393.svg",
+    "static/media/icon-search.svg": "/weather-app/static/media/icon-search.5b999ce184e338f3c5400eb82c107192.svg",
+    "index.html": "/weather-app/index.html",
+    "main.07a091d8.css.map": "/weather-app/static/css/main.07a091d8.css.map",
+    "main.0e617f8e.js.map": "/weather-app/static/js/main.0e617f8e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.07a091d8.css",
+    "static/js/main.0e617f8e.js"
+  ]
+}
