@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: dm-sans;
+  src: url('./assets/fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: dm-sans-italic;
+  src: url('./assets/fonts/DM_Sans/DMSans-Italic-VariableFont_opsz\,wght.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: bricolage;
+  src: url('./assets/fonts/Bricolage_Grotesque/BricolageGrotesque-VariableFont_opsz\,wdth\,wght.ttf');
+  font-display: swap;
+}
+
+body, html {
+  top: 0;
+  inset: 0;
+  width: 100%;
+  font-family: dm-sans, serif;
+}
+
+#header {
+  font-family: bricolage, serif;
+}
+
+#temperature {
+  font-family: dm-sans-italic, serif;
+}
