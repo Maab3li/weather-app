@@ -4,6 +4,7 @@ import logo from './assets/images/logo.svg'
 import settingsIcon from './assets/images/icon-units.svg'
 import searchIcon from './assets/images/icon-search.svg'
 import bgTodaySm from './assets/images/bg-today-small.svg'
+import bgTodayLg from './assets/images/bg-today-large.svg'
 import { getWeather } from './hooks/getWeather'
 import { Suspense, useState } from 'react'
 import { getWeatherIcon } from './hooks/getWeatherIcon'
@@ -77,27 +78,31 @@ const App: React.FC = () => {
           How's the sky looking today
         </h1>
         {/*Country search bar*/}
-        <div className='flex flex-col justify-center items-center w-[100%] px-5 gap-3 *:tracking-[.7px]'>
-          <div className='inline-flex bg-[#312f4b] w-[100%] px-4 py-3 gap-3 rounded-lg'>
+        <div className='flex flex-col justify-center items-center w-[100%] px-5 gap-3 sm:flex-row *:tracking-[.7px] '>
+          <div className='inline-flex bg-[#312f4b] w-[100%] px-4 py-3 gap-3 rounded-lg sm:w-[50%]'>
             <img src={searchIcon} alt='search icon' />
             <input name='searchInput' id='searchInput' type='text'  placeholder='Search for a place...' onChange={e => setCountry(e.target.value ==''?'Afghanistan':e.target.value)} className='bg-[#312f4b] border-[#312f4b] w-[100%] placeholder-[#aeaeb7]' />
           </div>
-          <button id='submit' type='submit' onClick={handleClick} className='w-[100%] bg-[#4455da] py-3 rounded-lg'>Search</button>
+          <button id='submit' type='submit' onClick={handleClick} className='w-[100%] bg-[#4455da] py-3 rounded-lg sm:w-[20%]'>Search</button>
         </div>
         {/*Current weather temprature and date*/}
-        <div className=' w-[100%] h-[300px] mt-10 px-5'>
-          <img src={bgTodaySm} alt='bg today small image' className='absolute'/>
-          <div id='location' className='relative text-center text-[30px] pt-10 font-900 '>{country}</div>
-          <div id='date' className='relative text-center text-[18px] pt-2'>{date}</div>
-          <div className='flex justify-between items-center w-full px-10 pt-5'>
-            <span id='day_image' className='relative'>
-              <img src={loaded?icons[1]:undefined} alt='weather icon' width='100px' height='100px' />
-            </span> 
-            <span id='temperature' className='relative text-[60px] font-bold'>{count == 2 &&weatherData.current_weather.temperature}{count == 2 && weatherData.current_weather_units.temperature[0]}</span>
-          </div>
-        </div> 
+        <div className='relative bg-red-200 place-self-center justify-center items-center  w-[350px] sm:w-[80%] h-[300px] sm:h-[230px]  sm:mx-15 sm:justify-center mt-10 '>
+          <img src={bgTodaySm} alt='bg today small image' className='absolute sm:invisible'/>
+          <img src={bgTodayLg} alt='bg today large image' className='absolute justify-center object-fill invisible sm:visible'/>
+          <div className='absolute w-[100%] p-10 mr-auto items-center h-[300px] sm:h-[180px] sm:flex sm:flex-row'>
+            <div className='relative flex flex-col items-center  w-[100%] h-[100%] text-center sm:mr-auto sm:flex sm:flex-col sm:text-start sm:items-start sm:place-items-center'>
+              <div id='location' className='absolute text-[30px] font-900'>{country}</div>
+              <div id='date' className='absolute text-[18px] pt-15'>{date}</div>
+            </div>
+            <div className='flex flex-row justify-between relative w-[100%] justify-center'>
+              <img src={loaded?icons[1]:undefined} alt='weather icon' className='w-[80px] h-[80px]' />
+              <div id='temperature' className='relative sm:ml-8 text-[60px] font-bold'>{count == 2 && weatherData.current_weather.temperature}{count == 2 && weatherData.current_weather_units.temperature[0]}</div>
+            </div>
+          </div> 
+        </div>
+
         {/*Current weather info*/}  
-        <div className='grid grid-cols-2 px-5 pt-2 gap-5'>
+        <div className='grid grid-cols-2 px-5 pt-2 gap-5 sm:mt-30 md:grid-cols-4 md:w-[600px] md:px-15'>
           <div className='relative flex flex-col bg-[#272541] p-5 border-1 border-[#3d3b5e] gap-5 rounded-xl'>
             <span className='relative text-[18px] text-[#d5d4d9]'>Feels like</span>
             <span className='relative text-[20px]'>{count == 2 && weatherData.hourly.apparent_temperature[0]}{count == 2 && weatherData.current_weather_units.temperature[0]}</span>
