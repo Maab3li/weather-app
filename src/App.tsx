@@ -89,8 +89,8 @@ const App: React.FC = () => {
           <div className='relative place-self-center place-items-center place-content-center w-[350px] sm:w-[80%] h-[300px] sm:h-[230px] sm:mx-15 sm:justify-center mt-10 md:w-[700px] lg:w-[920px] xl:w-[800px] xl:place-self-start xl:px-20'>
             <img src={bgTodaySm} alt='bg today small image' className='absolute sm:invisible'/>
             <img src={bgTodayLg} alt='bg today large image' className='absolute justify-center sm:w-[100%] invisible sm:visible'/>
-            <div className=' w-[100%] p-10 mr-auto items-center h-[300px] sm:h-[180px] sm:flex sm:flex-row'>
-              <div className='relative flex flex-col align-middle  w-[100%] text-center sm:mr-auto sm:flex-row sm:text-start sm:items-start  md:h-[250px] md:mt-10 md:items-center lg:mt-30'>
+            <div className=' w-[100%] p-10 mr-auto items-center h-[300px] sm:h-[180px] sm:flex sm:flex-row xl:px-0 xl:py-10 '>
+              <div className='relative flex flex-col align-middle  w-[100%] text-center sm:mr-auto sm:flex-row sm:text-start sm:items-start  md:h-[250px] md:mt-10 md:items-center lg:mt-30 xl:mt-20'>
                 <div id='location' className='absolute text-[30px] font-900'>{country}</div>
                 <div id='date' className='absolute text-[18px] pt-15'>{date}</div>
                 <div className='flex flex-row gap-5 mt-30 sm:mt-0 sm:ml-auto'>
