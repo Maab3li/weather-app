@@ -86,11 +86,11 @@ const App: React.FC = () => {
           <button id='submit' type='submit' onClick={handleClick} className='w-[100%] bg-[#4455da] py-3 rounded-lg sm:w-[20%]'>Search</button>
         </div>
         {/*Current weather temprature and date*/}
-          <div className='relative place-self-center place-items-center w-[350px] sm:w-[80%] h-[300px] sm:h-[230px] sm:mx-15 sm:justify-center mt-10 md:w-[700px] lg:w-[920px] xl:w-[800px] xl:place-self-start xl:px-20'>
+          <div className='relative place-self-center place-items-center place-content-center w-[350px] sm:w-[80%] h-[300px] sm:h-[230px] sm:mx-15 sm:justify-center mt-10 md:w-[700px] lg:w-[920px] xl:w-[800px] xl:place-self-start xl:px-20'>
             <img src={bgTodaySm} alt='bg today small image' className='absolute sm:invisible'/>
             <img src={bgTodayLg} alt='bg today large image' className='absolute justify-center sm:w-[100%] invisible sm:visible'/>
             <div className=' w-[100%] p-10 mr-auto items-center h-[300px] sm:h-[180px] sm:flex sm:flex-row'>
-              <div className='relative flex flex-col items-center  w-[100%] h-[100%] text-center sm:mr-auto sm:flex-row sm:text-start sm:items-start'>
+              <div className='relative flex flex-col align-middle  w-[100%] text-center sm:mr-auto sm:flex-row sm:text-start sm:items-start  md:h-[250px] md:mt-10 md:items-center lg:mt-30'>
                 <div id='location' className='absolute text-[30px] font-900'>{country}</div>
                 <div id='date' className='absolute text-[18px] pt-15'>{date}</div>
                 <div className='flex flex-row gap-5 mt-30 sm:mt-0 sm:ml-auto'>
@@ -101,7 +101,7 @@ const App: React.FC = () => {
             </div> 
           </div>
         {/*Current weather info*/}  
-          <div className='grid grid-cols-2 place-self-center place-items-center px-5 pt-2 gap-5 sm:px-20  md:grid-cols-4 md:w-[700px]  md:pt-15 md:gap-45 md:place-content-center xl:place-self-start  lg:gap-62 lg:mt-15  xl:gap-51 xl:ml-30'>
+          <div className='grid grid-cols-2 place-self-center place-items-center px-5 pt-2 gap-5 sm:px-20  md:grid-cols-4 md:w-[700px]  md:pt-15 md:gap-45 md:place-content-center xl:place-self-start  lg:gap-62 lg:mt-25 xl:gap-51 xl:ml-30'>
             <div className='relative flex flex-col bg-[#272541] p-5 border-1 border-[#3d3b5e] gap-5 rounded-xl md:w-[150px] lg:w-[180px] '>
               <span className='relative text-[18px] text-[#d5d4d9]'>Feels like</span>
               <span className='relative text-[20px]'>{count == 2 && weatherData.hourly.apparent_temperature[0]}{count == 2 && weatherData.current_weather_units.temperature[0]}</span>
