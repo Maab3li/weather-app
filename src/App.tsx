@@ -94,7 +94,7 @@ const App: React.FC = () => {
                 <div id='location' className='absolute text-[30px] font-900'>{country}</div>
                 <div id='date' className='absolute text-[18px] pt-15'>{date}</div>
                 <div className='flex flex-row gap-5 mt-30 sm:mt-0 sm:ml-auto'>
-                <img src={loaded?icons[1]:undefined} alt='weather icon' className='w-[80px] h-[80px]' />
+                <img src={loaded&&count==2?icons[1]:undefined} alt='weather icon' className='w-[80px] h-[80px]' />
                 <div id='temperature' className='relative sm:ml-8 text-[60px] font-bold'>{count == 2 && weatherData.current_weather.temperature}{count == 2 && weatherData.current_weather_units.temperature[0]}</div>
                 </div>
               </div>
