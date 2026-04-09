@@ -13,7 +13,7 @@ const App: React.FC = () => {
 
   const [country, setCountry] = useState<string>('Afghanistan')
 
-  let selectedHourlyDay = 0
+  const [selectedHourlyDay, setSelectedHourlyDay] = useState<number>(0)
 
   const {weatherData, weatherCodes, count} =  getWeather(country)
 
@@ -49,7 +49,7 @@ const App: React.FC = () => {
 
   const handleChange = (e:any) => {
     e.preventDefault()
-    selectedHourlyDay = e.target.value
+    setSelectedHourlyDay(e.target.value)
     console.log(selectedHourlyDay)
   }
   
