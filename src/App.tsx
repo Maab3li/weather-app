@@ -106,15 +106,15 @@ const App: React.FC = () => {
               <span className='relative text-[18px] text-[#d5d4d9]'>Feels like</span>
               <span className='relative text-[20px]'>{count == 2 && weatherData.hourly.apparent_temperature[0]}{count == 2 && weatherData.current_weather_units.temperature[0]}</span>
             </div>
-            <div className='relative flex flex-col bg-[#272541] p-5 border-1 border-[#3d3b5e] gap-5 rounded-xl w-[150px] sm:w-[280px] lg:w-[180px]'>
+            <div className='relative flex flex-col bg-[#272541] p-5 border-1 border-[#3d3b5e] gap-5 rounded-xl w-[150px] sm:w-[280px] md:w-[150px] lg:w-[180px]'>
               <span className='relative text-[18px] text-[#d5d4d9]'>Humidity</span>
               <span className='relative text-[20px]'>{count == 2 && weatherData.hourly.relative_humidity_2m[0]}%</span>
             </div>
-            <div className='relative flex flex-col bg-[#272541] p-5 border-1 border-[#3d3b5e] gap-5 rounded-xl w-[150px] sm:w-[280px] lg:w-[180px]'>
+            <div className='relative flex flex-col bg-[#272541] p-5 border-1 border-[#3d3b5e] gap-5 rounded-xl w-[150px] sm:w-[280px] md:w-[150px] lg:w-[180px]'>
               <span className='relative text-[18px] text-[#d5d4d9]'>Wind</span>
               <span className='relative text-[20px]'>{count == 2 && weatherData.hourly.wind_speed_10m[0]} {count == 2 && weatherData.current_weather_units.windspeed}</span>
             </div>
-            <div className='relative flex flex-col bg-[#272541] p-5 border-1 border-[#3d3b5e] gap-5 rounded-xl w-[150px] sm:w-[280px]  lg:w-[180px]'>
+            <div className='relative flex flex-col bg-[#272541] p-5 border-1 border-[#3d3b5e] gap-5 rounded-xl w-[150px] sm:w-[280px] md:w-[150px] lg:w-[180px]'>
               <span className='relative text-[18px] text-[#d5d4d9]'>Precipitation</span>
               <span className='relative text-[20px]'>{count == 2 && weatherData.hourly.precipitation[0]} {count == 2 && weatherData.hourly_units.precipitation}</span>
             </div>
