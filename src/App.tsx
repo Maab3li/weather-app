@@ -157,7 +157,7 @@ const App: React.FC = () => {
                 </span>
               </div>
               <div className='flex-col p-3 *:rounded-lg xl:py-7'>
-                {hourlyCodes[selectedHourlyDay]&&hourlyTemperatures[selectedHourlyDay]? (
+                {hourlyCodes[selectedHourlyDay]&&hourlyTemperatures[selectedHourlyDay]&&loaded? (
                   <div>
                     <div className='flex flex-row justify-between bg-[#312f4b] border-1 mt-3 border-[#3d3b5e] p-3'>
                       <div className='flex gap-3 items-center'>
@@ -192,28 +192,28 @@ const App: React.FC = () => {
                         <img src={loaded&&count==2?icons[hourlyCodes[selectedHourlyDay][19]]:''} alt='icon' width={30} height={30} />
                         <span>7PM</span>
                       </div>
+                      <div>{hourlyTemperatures[selectedHourlyDay][19]}{count == 2 && weatherData.current_weather_units.temperature[0]}</div>
+                    </div>
+                    <div className='flex flex-row justify-between bg-[#312f4b] border-1 mt-3 border-[#3d3b5e] p-3'>
+                      <div className='flex gap-3 items-center'>
+                        <img src={loaded&&count==2?icons[hourlyCodes[selectedHourlyDay][20]]:''} alt='icon' width={30} height={30} />
+                        <span>8PM</span>
+                      </div>
                       <div>{hourlyTemperatures[selectedHourlyDay][20]}{count == 2 && weatherData.current_weather_units.temperature[0]}</div>
                     </div>
                     <div className='flex flex-row justify-between bg-[#312f4b] border-1 mt-3 border-[#3d3b5e] p-3'>
                       <div className='flex gap-3 items-center'>
                         <img src={loaded&&count==2?icons[hourlyCodes[selectedHourlyDay][21]]:''} alt='icon' width={30} height={30} />
-                        <span>8PM</span>
+                        <span>9PM</span>
                       </div>
                       <div>{hourlyTemperatures[selectedHourlyDay][21]}{count == 2 && weatherData.current_weather_units.temperature[0]}</div>
                     </div>
                     <div className='flex flex-row justify-between bg-[#312f4b] border-1 mt-3 border-[#3d3b5e] p-3'>
                       <div className='flex gap-3 items-center'>
                         <img src={loaded&&count==2?icons[hourlyCodes[selectedHourlyDay][22]]:''} alt='icon' width={30} height={30} />
-                        <span>9PM</span>
-                      </div>
-                      <div>{hourlyTemperatures[selectedHourlyDay][22]}{count == 2 && weatherData.current_weather_units.temperature[0]}</div>
-                    </div>
-                    <div className='flex flex-row justify-between bg-[#312f4b] border-1 mt-3 border-[#3d3b5e] p-3'>
-                      <div className='flex gap-3 items-center'>
-                        <img src={loaded&&count==2?icons[hourlyCodes[selectedHourlyDay][23]]:''} alt='icon' width={30} height={30} />
                         <span>10PM</span>
                       </div>
-                      <div>{hourlyTemperatures[selectedHourlyDay][23]}{count == 2 && weatherData.current_weather_units.temperature[0]}</div>
+                      <div>{hourlyTemperatures[selectedHourlyDay][22]}{count == 2 && weatherData.current_weather_units.temperature[0]}</div>
                     </div>
                 </div>
                 ): (
